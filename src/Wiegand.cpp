@@ -41,7 +41,7 @@ byte translateEnterEscapeKeyPress(byte originalKeyPress) {
 	}
 }
 
-bool WIEGAND::DoWiegandConversion() {
+bool WIEGAND::available() {
 	if (_bitCount) {							// if no more signal coming through after 25ms
 		uint32_t sysTick = millis();
 		if (sysTick - _lastWiegand > 25) {
