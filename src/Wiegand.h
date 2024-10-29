@@ -15,7 +15,7 @@ public:
 	WIEGAND(byte pinD0, byte pinD1);
 	uint32_t getCode() { return _card; };
 	byte getWiegandType() { return _wiegandType; };
-	bool DoWiegandConversion();
+	bool available();
 private:
 	static void ReadD0() INTERRUPT_ATTR;
 	static void ReadD1() INTERRUPT_ATTR;
